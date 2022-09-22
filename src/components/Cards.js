@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Card from "./Card";
+import "./cards.css";
 
 function Cards() {
   const [items, setItems] = useState(
@@ -34,20 +35,22 @@ function Cards() {
       setPrev(-1);
       if (
         items[0].stat !== "" &&
-        items[1] !== "" &&
-        items[2] !== "" &&
-        items[3] !== "" &&
-        items[4] !== "" &&
-        items[5] !== "" &&
-        items[6] !== "" &&
-        items[7] !== "" &&
-        items[8] !== "" &&
-        items[9] !== "" &&
-        items[10] !== "" &&
-        items[11] !== "" &&
-        items[12] !== "" &&
-        items[13] !== "" &&
-        items[14] !== ""
+        // items[1].stat !== "" &&
+        items[2].stat !== "" &&
+        // items[3].stat !== "" &&
+        items[4].stat !== "" &&
+        // items[5].stat !== "" &&
+        items[6].stat !== "" &&
+        // items[7].stat !== "" &&
+        items[8].stat !== "" &&
+        // items[9].stat !== "" &&
+        items[10].stat !== "" &&
+        // items[11].stat !== "" &&
+        items[12].stat !== "" &&
+        // items[13].stat !== "" &&
+        items[14].stat !== "" &&
+        // items[15].stat !== "" &&
+        items[16].stat !== ""
       ) {
         setResult(true);
       }

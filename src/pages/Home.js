@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Timer from "../components/Timer";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <Link className="" to="/memory">
         <button className="">Characters</button>
       </Link>
+      <Timer />
     </div>
   );
 };
