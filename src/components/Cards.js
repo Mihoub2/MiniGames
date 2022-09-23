@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "./Card";
 import "./cards.css";
+import WinModal from "./LostModal";
 
 function Cards() {
   const [items, setItems] = useState(
@@ -81,9 +82,8 @@ function Cards() {
       {items.map((item, index) => (
         <Card key={index} item={item} id={index} handleClick={handleClick} />
       ))}
-      {result === true ? alert("congratz!!") : ""}
+      {result === true ? <WinModal /> : ""}
     </div>
   );
 }
-
 export default Cards;

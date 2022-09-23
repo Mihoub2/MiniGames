@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-import Timer from "../components/Timer";
 
 const Home = () => {
   return (
     <div>
-      hello home
+      HOME !
       <Link className="" to="/memory">
-        <button className="">Characters</button>
+        <button className="">Essaie mon jeu</button>
       </Link>
-      <Timer />
     </div>
   );
 };

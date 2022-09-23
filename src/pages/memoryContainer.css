@@ -1,6 +1,15 @@
 .memoryContainer {
-  /* display: flex; */
+  display: flex;
   justify-content: center;
-  /* flex-direction: row; */
-  background-color: red;
+  flex-direction: column;
+  align-items: center;
+}
+.timer-wrapper {
+  margin-top: 30px;
+}
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
