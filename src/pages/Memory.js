@@ -1,21 +1,24 @@
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
-
 import React from "react";
-
-import "../components/countdown.css";
-
 import Cards from "../components/Cards";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const renderTime = ({ remainingTime }) => {
+const RenderTime = ({ remainingTime }) => {
+  const navigate = useNavigate();
+
+  const [off, setOff] = useState(false);
+
   if (remainingTime === 0) {
-    return <div className="timer">Too lale...</div>;
+    setOff(true);
   }
 
   return (
     <div className="timer">
-      <div className="text">Remaining</div>
+      <div className="text">Temps restant</div>
       <div className="value">{remainingTime}</div>
       <div className="text">seconds</div>
+      {off === true ? navigate("/home") : ""}
     </div>
   );
 };
@@ -24,18 +27,16 @@ const Memory = () => {
   return (
     <div className="memoryContainer">
       <Cards />
-      <div className="App">
-        <div className="timer-wrapper">
-          <CountdownCircleTimer
-            isPlaying
-            duration={10}
-            colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
-            colorsTime={[10, 6, 3, 0]}
-            onComplete={() => ({ shouldRepeat: false, delay: 1 })}
-          >
-            {renderTime}
-          </CountdownCircleTimer>
-        </div>
+      <div className="timer-wrapper">
+        <CountdownCircleTimer
+          isPlaying
+          duration={1000}
+          colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
+          colorsTime={[10, 6, 3, 0]}
+          onComplete={() => ({ shouldRepeat: false, delay: 1 })}
+        >
+          {RenderTime}
+        </CountdownCircleTimer>
       </div>
     </div>
   );

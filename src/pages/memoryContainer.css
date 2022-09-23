@@ -1,5 +1,6 @@
 .memoryContainer {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  flex-direction: row;
+  /* flex-direction: row; */
+  background-color: red;
 }

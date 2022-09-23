@@ -1,17 +1,17 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #fae19d;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #58a6ff;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 1em;
 }
-.container {
+.cardContainer {
   height: 700px;
   width: 700px;
   display: grid;
